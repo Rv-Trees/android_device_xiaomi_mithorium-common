@@ -80,11 +80,6 @@ else ifeq ($(TARGET_KERNEL_VERSION),4.19)
 TARGET_KERNEL_CONFIG += \
     vendor/feature/wireguard.config
 endif
-
-ifneq ($(shell grep CONFIG_KSU_STATIC_HOOKS $(TARGET_KERNEL_SOURCE)/techpack/KernelSU/kernel/ksu.c),)
-TARGET_KERNEL_CONFIG += \
-    vendor/feature/ksu_static_hooks.config
-endif
 endif
 
 # ANT
