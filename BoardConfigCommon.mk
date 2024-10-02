@@ -48,10 +48,10 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM=1
 
 # Kernel - Mi-Thorium
 ifeq ($(TARGET_USES_MITHORIUM_KERNEL),true)
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mithorium-$(TARGET_KERNEL_VERSION)/kernel
+TARGET_KERNEL_SOURCE := kernel/xiaomi/rvkernel-$(TARGET_KERNEL_VERSION)/kernel
 
 TARGET_KERNEL_CONFIG := \
-    vendor/$(TARGET_BOARD_PLATFORM)-perf_defconfig \
+    vendor/rvkernel-mi8937_defconfig \
     vendor/common.config \
     vendor/feature/android-12.config \
     vendor/feature/erofs.config \
